@@ -1,0 +1,17 @@
+{
+  "name": "ejs-crud-coding-shiksha",
+  "version": "1.0.0",
+  "description": "crud with electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "ueredeveloper",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^24.1.2"
+  },
+  "dependencies": {
+    "electron-reload": "^2.0.0-alpha.1"
+  }
+}
