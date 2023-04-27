@@ -1,2 +1,2 @@
-const {remote} = require('electron')
-const main = remote.require('./main')
+/*const {remote} = require('electron')
+const main = remote.require('./main')*/
