@@ -20,33 +20,17 @@ const createWindow = () => {
         }
     })
 
-    /*
-    ipcMain.on('set-title', (event, title) => {
-        const webContents = event.sender
-        const fromWC = BrowserWindow.fromWebContents(webContents)
-        fromWC.setTitle(title)
-    })
-    */
-
 
     win.loadFile(`${__dirname}/src/index.html`)
     win.webContents.openDevTools()
 }
 
 app.whenReady().then(() => {
+    
     ipcMain.on('set-title', handleSetTitle)
     createWindow()
 })
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') app.quit()
 })
-
-/*
-app.whenReady().then(() => {
-    createWindow()
-
-    app.on('activate', () => {
-        if (BrowserWindow.getAllWindows().length === 0) createWindow()
-    })
-})*/
 
